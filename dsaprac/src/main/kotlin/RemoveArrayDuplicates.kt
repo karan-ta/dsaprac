@@ -4,19 +4,19 @@ fun main() {
 }
 class RemoveArrayDuplicates{
     fun removeArrayDuplicates(inputArray:IntArray){
-        var previous = inputArray[0]
+        var temp = inputArray[0]
         var i = 0
         var j = 1
         while(j < inputArray.size){
 
-            if(inputArray[j] == previous){
+            if(inputArray[j] == temp){
 
             }
             else{
-                previous = inputArray[j]
+                temp = inputArray[j]
                 i++
 
-                inputArray[i] = previous
+                inputArray[i] = temp
             }
             j++
         }
