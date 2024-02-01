@@ -6,23 +6,17 @@ class SelectionSort{
         var temp = inputArray[i]
         inputArray[i] = inputArray[j]
         inputArray[j] = temp
-
     }
     fun selectionSort(inputArray:IntArray){
-        var i = 0
-        var j = 1
         var minIndex = 0
-        while(i < inputArray.size - 1){
+        for(i in 0..inputArray.size - 2){
             minIndex = i
-            j = i + 1
-            while(j < inputArray.size){
+            for(j in i+1 ..inputArray.size - 1){
                 if(inputArray[j] < inputArray[minIndex]){
                     minIndex = j
                 }
-            j++
             }
             swap(inputArray,i,minIndex)
-            i++
         }
     }
 }
