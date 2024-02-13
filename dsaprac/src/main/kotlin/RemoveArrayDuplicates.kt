@@ -3,8 +3,12 @@ fun main() {
 
 }
 class RemoveArrayDuplicates{
+    //uses two pointer
+    // j traverses the array
+    // i is pointer of index  of the desired output array
     fun removeArrayDuplicates(inputArray:IntArray){
         var temp = inputArray[0]
+
         var i = 0
         var j = 1
         while(j < inputArray.size){
