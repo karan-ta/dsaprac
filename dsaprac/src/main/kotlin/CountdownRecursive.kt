@@ -3,7 +3,7 @@ fun main() {
 }
 class CountdownRecursive {
     fun countdownRecursive(i:Int){
-        if(i <= 1)
+        if(i <= 0)
             return
         else
             //for descending order :
