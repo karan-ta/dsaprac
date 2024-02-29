@@ -10,6 +10,5 @@ class ArraySplitter {
         }
         arraySplitter(A.slice(0..A.size/2 - 1).toIntArray())
         arraySplitter(A.slice(A.size/2..A.size - 1).toIntArray())
-
     }
 }
