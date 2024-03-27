@@ -41,9 +41,18 @@ fun main() {
 //    println(dello.name)
 //    dello.name = "karan"
 //    println(dello.name)
-    UnsafeCastOperator().unsafeCast(null)
-    UnsafeCastOperator().unsafeCast(42)
-    UnsafeCastOperator().unsafeCast("karan")
+//    UnsafeCastOperator().unsafeCast(null)
+//    UnsafeCastOperator().unsafeCast(42)
+//    UnsafeCastOperator().unsafeCast("karan")
+//      ConditionalsDemo().getMax()
+//      ConditionalsDemo().whenDemo()
+//      ConditionalsDemo().whenEnumDemo()
+//      ConditionalsDemo().whenMultipleCases(5)
+        ConditionalsDemo().whenInDemo(10)
+
+}
+enum class Bit {
+    ZERO, ONE
 }
 
 class NumbersPrac {
@@ -237,4 +246,74 @@ class UnsafeCastOperator{
     fun unsafeCast(x:Any?){
         println(x as? String)
     }
+}
+
+class ConditionalsDemo{
+    fun getMax(){
+
+        val a = 10
+        val b = 20
+        val max = if(a > b) a else b
+        println(max)
+    }
+    //last line of block is the return value
+    fun getMaxBlock(){
+        val a = 10
+        val b = 20
+        val max = if(a > b){
+            println("a is greater")
+            a
+        }
+        else{
+            println("b is greater")
+            b
+        }
+        println(max)
+    }
+    fun whenDemo(){
+        val x = 1
+        when(x){
+            1 -> println("x == 1")
+            2 -> println("x == 2")
+            else -> println("x is neither 1 nor 2")
+        }
+    }
+
+    fun getRandomBit():Bit{
+        return Bit.ZERO
+    }
+    fun whenEnumDemo(){
+        val numericValue = when (getRandomBit()) {
+            Bit.ZERO -> 0
+            Bit.ONE -> 1
+            // 'else' is not required because all cases are covered
+
+        }
+        println(numericValue)
+    }
+    fun whenMultipleCases(num:Int){
+        when(num){
+            0,2,4 -> println("number is even")
+            1,3,5 -> println("number is odd")
+        }
+    }
+
+    fun whenInDemo(num:Int){
+        when(num){
+            in 1..10 -> println("number is between 1 to 10")
+            in 10..20 -> println("number is between 10 to 20")
+            else -> println("number is not between 1 to 20")
+        }
+    }
+
+    fun whenIsDemo(param:Any?){
+         val output = when(param){
+             is String -> param.startsWith("K")
+             is Int -> param
+             else -> "not string or int"
+         }
+        println(output)
+
+    }
+
 }
