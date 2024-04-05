@@ -48,8 +48,8 @@ fun main() {
 //      ConditionalsDemo().whenDemo()
 //      ConditionalsDemo().whenEnumDemo()
 //      ConditionalsDemo().whenMultipleCases(5)
-        ConditionalsDemo().whenInDemo(10)
-
+//        ConditionalsDemo().whenInDemo(10)
+        StringPrac().splitLines()
 }
 enum class Bit {
     ZERO, ONE
@@ -65,6 +65,19 @@ class NumbersPrac {
 }
 
 class StringPrac {
+    fun splitLines(){
+        val inputString = """
+            karan
+            
+            vihaan
+            
+            priya
+        """.trimIndent()
+        val lineList = inputString.lines()
+        for (myLine in lineList){
+            println(myLine)
+        }
+    }
     fun immutableString(inputString:String){
         println(inputString.uppercase())
         println(inputString)
