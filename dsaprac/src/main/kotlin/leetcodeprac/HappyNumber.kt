@@ -24,9 +24,9 @@ class HappyNumber {
     fun getHappyNumber(inputNumber:Int):Boolean{
         digitsList = mutableListOf()
         getDigits(inputNumber)
-        digitsList.forEach{
-            println(it)
-        }
+//        digitsList.forEach{
+//            println(it)
+//        }
         val sumOfSquares = getSumOfSquares()
 //        if(sumOfSquares == 1)
             return true
