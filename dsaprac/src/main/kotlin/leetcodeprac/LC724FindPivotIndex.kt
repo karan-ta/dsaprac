@@ -7,7 +7,7 @@ class LC724FindPivotIndex {
     fun pivotIndex(nums:IntArray):Int{
     var sum = 0
     val rsum = IntArray(nums.size)
-    var pivotIndex = 0
+    var pivotIndex = -1
     for(i in nums.size - 1 downTo 0){
         rsum[i] = sum
         sum += nums[i]
@@ -17,8 +17,11 @@ class LC724FindPivotIndex {
         }
         sum = 0
         for(i in 0 until nums.size){
-            if(sum == rsum[i])
+            if(sum == rsum[i]){
                 pivotIndex = i
+                return pivotIndex
+            }
+
             sum += nums[i]
 
         }
