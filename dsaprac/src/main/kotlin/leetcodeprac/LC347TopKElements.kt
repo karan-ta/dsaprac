@@ -34,4 +34,5 @@ class LC347TopKElements {
         return outputList.toIntArray()
     }
 }
-//49,347,560
+//49,347,560,128
+//encode decode strings
