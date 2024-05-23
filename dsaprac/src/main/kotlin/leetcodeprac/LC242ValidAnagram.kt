@@ -1,7 +1,9 @@
-package leetcode
+package leetcodeprac
 
 fun main() {
-    LC242ValidAnagram().isAnagram("karan","narak")
+    LC242ValidAnagram().isAnagram("karan","narak").let{
+        println(it)
+    }
 }
 class LC242ValidAnagram {
     fun isAnagram(s: String, t: String): Boolean {
